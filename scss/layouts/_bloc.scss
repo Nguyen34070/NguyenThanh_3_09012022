@@ -1,0 +1,38 @@
+@import "../utils/_variables";
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+header {
+    font-family: 'Shrikhand', cursif ;
+    @include flexcenter;
+}
+.none {
+    text-decoration: none;
+    color: $color-light;
+}
+.none2 {
+    text-decoration: none;
+}
+.foot {
+    background: darken($color: $back, $amount: 70%);
+    padding: 30px;
+    color: $color-light;
+    padding: 30px;
+    line-height: 2rem;
+}
+.detailfooter {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+.gap {
+    gap: 15px;
+}

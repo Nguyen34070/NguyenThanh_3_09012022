@@ -1,0 +1,199 @@
+@import "./base/_typography";
+@import "./utils/_mixins";
+@import "./utils/_variables";
+@import "./layouts/_bloc";
+@import "./components/_animation";
+/* Général */
+.font{
+    font-family: 'Shrikhand', cursif ;
+    font-weight: lighter;
+    padding-bottom: 25px;
+}
+h2 {
+    margin-left: 25px;
+}
+h3 {
+    margin-top: 4px;
+    margin-bottom: 0px;  
+}
+/* Header */
+.recherche {
+    width: 100%;
+    height: 70px;
+    color: darken($color: $back, $amount: 70%);
+    display: flex;
+    flex-direction: row;
+    @include flexcenter;
+    gap: 20px;
+    background-color: darken($color: $back, $amount: 5%);
+    box-shadow: inset 0 20px 10px -20px darken($color: $back, $amount: 30%);
+}
+.taille {
+    font-weight: 1000;
+    font-size: 30px;
+    padding: 10px 10px 10px;
+}
+.main {
+    background-color: $back;
+    display: flex;
+    flex-direction: column;
+    @include flexcenter;
+}
+.btn {
+    padding: 17px 30px 17px;
+    margin: 25px 10px 50px;
+    font-size: 18px;
+    border-radius: 30px;
+    background: $gradient;
+    color: $color-light;
+    border: 0px;
+    @include btn-hover;
+    &:hover {
+        opacity: 0.5;
+        box-shadow:  0 10px 10px 10px darken($color: $back, $amount: 30%);
+    }    
+}
+/* Fonctionnement */
+.fonction {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    @media (min-width:1280px) {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: center;
+    }
+}
+.rond {
+    position: relative;
+    background: $color-primary;
+    width: 25px;
+    height: 25px;
+    left: -40px;
+    border-radius: 50%;
+    @include flexcenter;
+    color: $color-light;
+    font-size: 15px;  
+}
+.align {// Bouton de fonctionnement
+    width: 340px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 25px;
+    padding: 28px;
+    margin-bottom: 25px;
+    gap: 20px;
+    font-weight: 500;
+    background: $back;
+    @include shadow;
+    &:hover {
+        background-color: lighten($color: $color-primary, $amount: 30%);
+        & i {
+            color: $color-primary;
+        }
+    }
+}
+/* Section */
+.section {
+    background: $back;
+    padding-top: 25px;
+    padding-bottom: 60px;
+
+}
+.section_media {
+    @media (min-width:991px) and (min-width:1024px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        margin: 0 10% 0 10%; 
+    }
+}
+.cubefull {
+    margin: auto;
+    height: 280px;
+    width: 85%;
+    background: $color-light;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 15px 0px silver;
+    @media (min-width:991px) {
+        width: 550px;
+    }
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.01);
+        transition: all 0s ease 0s;
+        box-shadow: 0px 0px 10px 0px $color-primary;
+    }
+}
+.cuberest {
+    text-decoration: none;
+    margin-top: 15px;
+    gap: 10px;
+    padding-left: 20px;
+    color: black;
+    & a {
+        @include decnone;
+    }
+}
+.imgsection {
+    @include image;
+    background-image: url("../asset/jay-wennington.jpg");
+    background-position: center;
+}    
+.imgsection2 {
+    @include image;
+    background-image: url("../asset/stil.jpg");
+    background-position: 25% 58%;
+}
+.imgsection3 {
+    @include image;
+    background-image: url("../asset/toa-heftiba.jpg");
+    background-position: center bottom;
+}
+.imgsection4 {
+    @include image;
+    background-image: url("../asset/louis-hansel.jpg");
+    background-position: center bottom;
+}
+.heart2 {
+    position: relative;
+    right: 29px;
+    z-index: 11;
+    color: black;
+}
+.heart {
+    position: relative;
+    left: 90%;
+    bottom: 40px;
+    color: transparent;
+    &:hover {
+        z-index: 9;
+        opacity: 1;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: effect 1s ease-in,;
+    }  
+}
+.fa-lg {
+    line-height: 1!important;
+}
+.new {
+    position: relative;
+    top: 15px;
+    left: 80%;
+    font-size: 15px;
+    width: 80px;
+    height: 30px;
+    border-radius: 3px;
+    @include flexcenter;
+    background: $color-tertiary;
+    color: darken($color: $color-tertiary, $amount: 50%);
+}

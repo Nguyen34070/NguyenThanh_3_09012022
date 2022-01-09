@@ -1,0 +1,397 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap");
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+
+header {
+  font-family: "Shrikhand", cursif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.none {
+  text-decoration: none;
+  color: white;
+}
+
+.none2 {
+  text-decoration: none;
+}
+
+.foot {
+  background: #434343;
+  padding: 30px;
+  color: white;
+  padding: 30px;
+  line-height: 2rem;
+}
+
+.detailfooter {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.gap {
+  gap: 15px;
+}
+
+.loader {
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  opacity: 0.9;
+  height: 100vh;
+  z-index: 11;
+  display: grid;
+  place-items: center;
+  animation: finish 200ms 0.5s forwards;
+}
+.loader::after {
+  content: "";
+  border-top: 4px solid #9356DC;
+  border-bottom: 4px solid #FF79DA;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  animation: spin 0.5s infinite ease-in-out;
+}
+
+@keyframes finish {
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes turn {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes down_animation {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  35% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  40% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  45% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  55% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes effect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Général */
+h1, h3, h2 {
+  font-family: "Shrikhand", cursif;
+}
+
+h4 {
+  width: 50px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #99e2d0;
+}
+
+.font {
+  font-weight: bolder;
+}
+
+/* Icone */
+.arrow {
+  position: absolute;
+  top: 63px;
+  left: 25px;
+  color: #434343;
+}
+
+.heart {
+  position: relative;
+  left: 90%;
+  bottom: 60px;
+  color: transparent;
+}
+.heart:hover {
+  z-index: 9;
+  opacity: 1;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: effect 1s ease-in forwards;
+}
+
+.heart2 {
+  position: relative;
+  right: 29px;
+  z-index: 11;
+  color: black;
+}
+
+.check {
+  background-color: #99e2d0;
+  margin-right: -55px;
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: margin-right 0.5s;
+  color: white;
+}
+
+/* Image des menu */
+.imgmenu {
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-image: url("../asset/jay-wennington.jpg");
+  background-position: center;
+}
+@media (min-width: 991px) {
+  .imgmenu {
+    height: 500px;
+  }
+}
+
+.imgmenu2 {
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-image: url("../asset/louis-hansel.jpg");
+  background-position: center bottom 25px;
+}
+@media (min-width: 991px) {
+  .imgmenu2 {
+    height: 500px;
+  }
+}
+@media (min-width: 1280px) {
+  .imgmenu2 {
+    background-position: 25% 75%;
+  }
+}
+
+.imgmenu3 {
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-image: url("../asset/stil.jpg");
+  background-position: 25% 68%;
+}
+@media (min-width: 991px) {
+  .imgmenu3 {
+    height: 500px;
+  }
+}
+@media (min-width: 1280px) {
+  .imgmenu3 {
+    background-position: 25% 60%;
+  }
+}
+
+.imgmenu4 {
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-image: url("../asset/toa-heftiba.jpg");
+  background-position: center bottom 5px;
+}
+@media (min-width: 991px) {
+  .imgmenu4 {
+    height: 500px;
+  }
+}
+@media (min-width: 1280px) {
+  .imgmenu4 {
+    background-position: 20% 75%;
+  }
+}
+
+/* Section */
+.main {
+  position: relative;
+  bottom: 50px;
+  padding-left: 25px;
+  padding-top: 25px;
+  background: #f5f5f5;
+  border-radius: 50px 50px 0px 0px;
+  padding-bottom: 55px;
+}
+@media (min-width: 1280px) {
+  .main {
+    bottom: 40px;
+  }
+}
+
+.titreplat {
+  display: flex;
+  border-radius: 15px;
+  background-color: white;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  filter: drop-shadow(-5px 4px 5px silver);
+  overflow: hidden;
+  animation: down_animation 1.2s 0.5s ease-in;
+}
+@media (min-width: 1280px) {
+  .titreplat {
+    width: 400px;
+    font-size: 1rem;
+  }
+}
+
+.titreplat:hover .check {
+  margin-right: 0;
+}
+.titreplat:hover .check i {
+  animation: turn 0.5s ease-in-out;
+}
+
+.animationdelay {
+  animation: down_animation 1.4s 0.5s ease-in;
+}
+
+.animationdelay2 {
+  animation: down_animation 1.7s 0.5s ease-in;
+}
+
+.animationdelay3 {
+  animation: down_animation 1.9s 0.5s ease-in;
+}
+
+.animationdelay4 {
+  animation: down_animation 2s 0.5s ease-in;
+}
+
+.animationdelay5 {
+  animation: down_animation 2.1s 0.5s ease-in;
+}
+
+.animationdelay6 {
+  animation: down_animation 2.3s 0.5s ease-in;
+}
+
+.animationdelay7 {
+  animation: down_animation 2.5s 0.5s ease-in;
+}
+
+.animationdelay8 {
+  animation: down_animation 2.7s 0.5s ease-in;
+}
+
+.animationdelay9 {
+  animation: down_animation 2.9s 0.5s ease-in;
+}
+
+.menu_description {
+  padding: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu_description div {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@media (min-width: 1280px) {
+  .menu_media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+.prix {
+  margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  font-weight: 900;
+}
+
+.btn {
+  padding: 17px 50px 17px;
+  margin: 50px;
+  font-size: 18px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  color: white;
+  border: 0px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+}
+.btn:hover {
+  box-shadow: 0 10px 10px 10px darkgray;
+  opacity: 0.5;
+}
+
+footer {
+  position: relative;
+  bottom: 50px;
+  height: 1rem;
+}
+
+/*# sourceMappingURL=menu.css.map */

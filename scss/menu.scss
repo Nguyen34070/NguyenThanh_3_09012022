@@ -1,0 +1,182 @@
+@import "./base/_typography";
+@import "./utils/_mixins";
+@import "./utils/_variables";
+@import "./layouts/_bloc";
+@import "./components/_animation";
+/* Général */
+h1, h3, h2 {
+    font-family: 'Shrikhand', cursif;
+}
+h4 {
+    width: 50px;
+    text-transform: uppercase;
+    border-bottom: 2px solid $color-tertiary;
+}
+.font {
+    font-weight: bolder;
+}
+/* Icone */
+.arrow {
+    position: absolute;
+    top: 63px;
+    left: 25px;
+    color: darken($color: $back, $amount: 70%);
+}
+.heart {
+    position: relative;
+    left: 90%;
+    bottom: 60px;
+    color: transparent;
+    &:hover {
+        z-index: 9;
+        opacity: 1;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: effect 1s ease-in forwards;
+    }  
+}
+.heart2 {
+    position: relative;
+    right: 29px;
+    z-index: 11;
+    color: black;
+}
+.check {
+    background-color: $color-tertiary;
+    margin-right: -55px;
+    width: 55px;
+    @include flexcenter;
+    transition: margin-right .5s;
+    color: $color-light;
+}
+/* Image des menu */
+.imgmenu {
+    @include image_menu;
+    background-image: url("../asset/jay-wennington.jpg");
+    background-position: center;
+}
+.imgmenu2 {
+    @include image_menu;
+    background-image: url("../asset/louis-hansel.jpg");
+    background-position: center bottom 25px;
+    @media (min-width:1280px) {
+        background-position: 25% 75%;
+    }
+}
+.imgmenu3 {
+    @include image_menu;
+    background-image: url("../asset/stil.jpg");
+    background-position: 25% 68%;
+    @media (min-width:1280px) {
+        background-position: 25% 60%;
+    }
+}
+.imgmenu4 {
+    @include image_menu;
+    background-image: url("../asset/toa-heftiba.jpg");
+    background-position: center bottom 5px;
+    @media (min-width:1280px) {
+        background-position: 20% 75%;
+    }
+}
+/* Section */
+.main {
+    position: relative;
+    bottom: 50px;
+    padding-left: 25px;
+    padding-top: 25px;
+    background: $back;
+    border-radius: 50px 50px 0px 0px;
+    padding-bottom: 55px;
+    @media (min-width:1280px) {
+        bottom: 40px;
+    }
+}
+.titreplat {// Cube blanc entier
+    display: flex;
+    border-radius: 15px;
+    background-color: $color-light;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    @include shadow;
+    overflow:  hidden;
+    animation: down_animation 1.2s 0.5s ease-in;
+    @media (min-width:1280px) {
+        width: 400px;
+        font-size: 1rem;
+    }
+}
+.titreplat:hover .check {
+    margin-right: 0;
+    & i {
+        animation: turn 0.5s ease-in-out;
+    }
+}
+.animationdelay {
+    animation: down_animation 1.4s 0.5s ease-in;
+}
+.animationdelay2 {
+    animation: down_animation 1.7s 0.5s ease-in;
+}
+.animationdelay3 {
+    animation: down_animation 1.9s 0.5s ease-in;
+}
+.animationdelay4 {
+    animation: down_animation 2s 0.5s ease-in;
+}
+.animationdelay5 {
+    animation: down_animation 2.1s 0.5s ease-in;
+}
+.animationdelay6 {
+    animation: down_animation 2.3s 0.5s ease-in;
+}
+.animationdelay7 {
+    animation: down_animation 2.5s 0.5s ease-in;
+}
+.animationdelay8 {
+    animation: down_animation 2.7s 0.5s ease-in;
+}
+.animationdelay9 {
+    animation: down_animation 2.9s 0.5s ease-in;
+}
+.menu_description {
+    padding: 1rem;
+    @include texte;
+    & div {
+        @include texte;
+    }
+}
+.menu_media {
+    @media (min-width:1280px) {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+.prix {
+    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    font-weight: 900;
+}
+.btn {
+    padding: 17px 50px 17px;
+    margin: 50px;
+    font-size: 18px;
+    border-radius: 30px;
+    background: $gradient;
+    color: $color-light;
+    border: 0px;
+    @include btn-hover;
+    &:hover {
+        box-shadow:  0 10px 10px 10px darken($color: $back, $amount: 30%);
+        opacity: 0.5;
+    }    
+}
+footer {
+    position: relative;
+    bottom: 50px;
+    height: 1rem;
+}

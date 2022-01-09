@@ -1,0 +1,12 @@
+{
+  "name": "p3_nguyen_thanh",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/main.scss:./fichiercss/style.css",
+    "scss": "sass --watch ./scss/menu.scss:./fichiercss/menu.css"
+  },
+  "author": "Nguyen Hoai-Thanh",
+  "license": "ISC",
+  "description": ""
+}
