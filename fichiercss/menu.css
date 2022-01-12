@@ -288,7 +288,7 @@ h4 {
   background-color: white;
   margin-bottom: 15px;
   margin-right: 15px;
-  filter: drop-shadow(-5px 4px 5px silver);
+  filter: drop-shadow(-5px 4px 5px darkgray);
   overflow: hidden;
   animation: down_animation 1.2s 0.5s ease-in;
 }

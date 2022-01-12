@@ -31,7 +31,7 @@
     }
 }
 @mixin shadow {
-    filter: drop-shadow(-5px 4px 5px silver);
+    filter: drop-shadow(-5px 4px 5px darken($color: $back, $amount: 30%));
 }
 @mixin texte {
     white-space: nowrap;

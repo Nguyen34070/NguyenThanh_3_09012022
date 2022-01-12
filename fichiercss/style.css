@@ -250,7 +250,7 @@ h3 {
   gap: 20px;
   font-weight: 500;
   background: #f5f5f5;
-  filter: drop-shadow(-5px 4px 5px silver);
+  filter: drop-shadow(-5px 4px 5px darkgray);
 }
 .align:hover {
   background-color: #e4d5f6;
