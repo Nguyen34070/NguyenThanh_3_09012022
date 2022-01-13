@@ -155,7 +155,7 @@ h3 {
 .imgsection3 {
     @include image;
     background-image: url("../asset/toa-heftiba.jpg");
-    background-position: center bottom;
+    background-position: 25% 75%;
 }
 .imgsection4 {
     @include image;
