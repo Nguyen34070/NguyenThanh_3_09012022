@@ -69,6 +69,26 @@ header {
   animation: spin 0.5s infinite ease-in-out;
 }
 
+.heart {
+  position: relative;
+  color: transparent;
+}
+.heart:hover {
+  z-index: 9;
+  opacity: 1;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: effect 1s ease-in forwards;
+}
+
+.heart2 {
+  position: relative;
+  right: 29px;
+  z-index: 11;
+  color: black;
+}
+
 @keyframes finish {
   to {
     transform: scale(0);
@@ -165,25 +185,8 @@ h4 {
 }
 
 .heart {
-  position: relative;
   left: 90%;
   bottom: 60px;
-  color: transparent;
-}
-.heart:hover {
-  z-index: 9;
-  opacity: 1;
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: effect 1s ease-in forwards;
-}
-
-.heart2 {
-  position: relative;
-  right: 29px;
-  z-index: 11;
-  color: black;
 }
 
 .check {
@@ -269,7 +272,7 @@ h4 {
 /* Section */
 .main {
   position: relative;
-  bottom: 50px;
+  bottom: 60px;
   padding-left: 25px;
   padding-top: 25px;
   background: #f5f5f5;

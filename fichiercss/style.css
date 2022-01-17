@@ -69,6 +69,26 @@ header {
   animation: spin 0.5s infinite ease-in-out;
 }
 
+.heart {
+  position: relative;
+  color: transparent;
+}
+.heart:hover {
+  z-index: 9;
+  opacity: 1;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: effect 1s ease-in forwards;
+}
+
+.heart2 {
+  position: relative;
+  right: 29px;
+  z-index: 11;
+  color: black;
+}
+
 @keyframes finish {
   to {
     transform: scale(0);
@@ -346,30 +366,9 @@ h3 {
   background-position: center bottom;
 }
 
-.heart2 {
-  position: relative;
-  right: 29px;
-  z-index: 11;
-  color: black;
-}
-
 .heart {
-  position: relative;
   left: 90%;
   bottom: 40px;
-  color: transparent;
-}
-.heart:hover {
-  z-index: 9;
-  opacity: 1;
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: effect 1s ease-in;
-}
-
-.fa-lg {
-  line-height: 1 !important;
 }
 
 .new {

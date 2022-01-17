@@ -18,7 +18,24 @@
         animation: spin .5s infinite ease-in-out;
     }
 }
-
+.heart {
+    position: relative;
+    color: transparent;
+    &:hover {
+        z-index: 9;
+        opacity: 1;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: effect 1s ease-in forwards;
+    }  
+}
+.heart2 {
+    position: relative;
+    right: 29px;
+    z-index: 11;
+    color: black;
+}
 @keyframes finish {
     to {
         transform: scale(0);

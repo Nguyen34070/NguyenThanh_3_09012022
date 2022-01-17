@@ -8,7 +8,7 @@ h1, h3, h2 {
     font-family: 'Shrikhand', cursif;
 }
 h4 {
-    width: 50px;
+    width: nth($pixel, 5);
     text-transform: uppercase;
     border-bottom: 2px solid $color-tertiary;
 }
@@ -19,33 +19,17 @@ h4 {
 .arrow {
     position: absolute;
     top: 63px;
-    left: 25px;
+    left: nth($pixel, 3);
     color: darken($color: $back, $amount: 70%);
 }
 .heart {
-    position: relative;
     left: 90%;
-    bottom: 60px;
-    color: transparent;
-    &:hover {
-        z-index: 9;
-        opacity: 1;
-        background: $gradient;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: effect 1s ease-in forwards;
-    }  
-}
-.heart2 {
-    position: relative;
-    right: 29px;
-    z-index: 11;
-    color: black;
+    bottom: nth($pixel, 7);
 }
 .check {
     background-color: $color-tertiary;
     margin-right: -55px;
-    width: 55px;
+    width: nth($pixel, 6);
     @include flexcenter;
     transition: margin-right .5s;
     color: $color-light;
@@ -83,22 +67,22 @@ h4 {
 /* Section */
 .main {
     position: relative;
-    bottom: 50px;
-    padding-left: 25px;
-    padding-top: 25px;
+    bottom: nth($pixel, 7);
+    padding-left: nth($pixel, 3);
+    padding-top: nth($pixel, 3);
     background: $back;
     border-radius: 50px 50px 0px 0px;
-    padding-bottom: 55px;
+    padding-bottom: nth($pixel, 6);
     @media (min-width:1280px) {
         bottom: 40px;
     }
 }
 .titreplat {// Cube blanc entier
     display: flex;
-    border-radius: 15px;
+    border-radius: nth($pixel, 1);
     background-color: $color-light;
-    margin-bottom: 15px;
-    margin-right: 15px;
+    margin-bottom: nth($pixel, 1);
+    margin-right: nth($pixel, 1);
     @include shadow;
     overflow:  hidden;
     animation: down_animation 1.2s 0.5s ease-in;
@@ -151,7 +135,7 @@ h4 {
     @media (min-width:1280px) {
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: nth($pixel, 2);
     }
 }
 .prix {
@@ -163,9 +147,9 @@ h4 {
 }
 .btn {
     padding: 17px 50px 17px;
-    margin: 50px;
+    margin: nth($pixel, 5);
     font-size: 18px;
-    border-radius: 30px;
+    border-radius: nth($pixel, 4);
     background: $gradient;
     color: $color-light;
     border: 0px;
@@ -177,6 +161,6 @@ h4 {
 }
 footer {
     position: relative;
-    bottom: 50px;
+    bottom: nth($pixel, 5);
     height: 1rem;
 }
